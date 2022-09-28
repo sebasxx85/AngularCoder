@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { MenusizqComponent } from './components/menusizq/menusizq.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AreacontenidoComponent } from './components/areacontenido/areacontenido.component';
+import { DirectivaComponent } from './components/directiva/directiva.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenusizqComponent,
     ToolbarComponent,
-    AreacontenidoComponent
+    AreacontenidoComponent,
+    DirectivaComponent
   ],
   imports: [
     BrowserModule

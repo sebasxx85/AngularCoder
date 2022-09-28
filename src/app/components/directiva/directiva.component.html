@@ -1,0 +1,33 @@
+
+<h2 class="centro">Lista Estudiantes</h2>
+
+<!--Lista de Estudiantes sin condiciones-->
+<ul class="centro">
+    <li *ngFor="let nombre of listaEstudiantes">
+        {{nombre | lowercase}}
+    </li>
+</ul>
+
+<!--Uso de ngIf-->
+<ul class="centro">
+    <div *ngFor="let nombre of listaEstudiantes">
+        <li *ngIf="nombre === 'Seba'">
+            <div [ngStyle]="{'color': 'red' }">{{ nombre | uppercase}}</div>
+        </li>
+    </div>
+</ul>
+
+<!--Uso de ngSwitch-->
+<ul class="centro">
+    <div *ngFor="let nombre of listaEstudiantes">
+        <li [ngSwitch] = "nombre" >
+            <div *ngSwitchCase = "'Seba'" [ngStyle]="{'color': 'blue' }">{{nombre | uppercase}}</div>
+            <div *ngSwitchCase = "'Alex'" [ngStyle]="{'color': 'green' }">{{nombre | lowercase}}</div>
+            <div *ngSwitchCase = "'Jaime'" [ngStyle]="{'color': 'orange' }">{{nombre | uppercase}}</div>
+            <div *ngSwitchCase = "'Camilo'" [ngStyle]="{'color': 'blue' }">{{nombre | lowercase}}</div>
+            <div *ngSwitchCase = "'Andres'" [ngStyle]="{'color': 'red' }">{{nombre | uppercase}}</div>
+        </li>
+    </div>
+</ul>
+
+
